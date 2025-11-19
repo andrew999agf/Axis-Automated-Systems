@@ -98,8 +98,7 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              whileHover={{ scale: 1.02, y: -5 }}
-              className="group relative p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-200 hover:border-primary-300 hover:shadow-2xl transition-all duration-300"
+              className="group relative p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-200 transition-all duration-300"
             >
               <div className={`absolute top-0 left-0 w-full h-1 rounded-t-2xl bg-gradient-to-r ${service.color}`} />
 
@@ -148,8 +147,7 @@ export default function Services() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -5 }}
-              className="p-6 rounded-xl border border-gray-200 hover:border-primary-400 hover:shadow-xl transition-all duration-300 bg-white"
+              className="p-6 rounded-xl border border-gray-200 transition-all duration-300 bg-white"
             >
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-3 rounded-lg bg-gradient-to-br from-primary-100 to-accent-100">

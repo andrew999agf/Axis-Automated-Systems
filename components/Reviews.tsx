@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Star, Quote } from 'lucide-react';
 
@@ -56,11 +55,9 @@ const reviews = [
 ];
 
 // Duplicate the reviews for seamless infinite scroll
-const duplicatedReviews = [...reviews, ...reviews];
+const duplicatedReviews = [...reviews, ...reviews, ...reviews];
 
 export default function Reviews() {
-  const [isPaused, setIsPaused] = useState(false);
-
   return (
     <section className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
@@ -83,69 +80,58 @@ export default function Reviews() {
 
       {/* Scrolling carousel */}
       <div className="relative">
-        <div
-          className="flex"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
+        <motion.div
+          className="flex gap-6"
+          animate={{
+            x: [0, -((400 + 24) * reviews.length)]
+          }}
+          transition={{
+            x: {
+              duration: 80,
+              repeat: Infinity,
+              ease: "linear",
+              repeatType: "loop"
+            }
+          }}
         >
-          <motion.div
-            className="flex gap-6 pr-6"
-            animate={{
-              x: isPaused ? 0 : [0, -50 * reviews.length + '%']
-            }}
-            transition={{
-              x: {
-                duration: 40,
-                repeat: Infinity,
-                ease: "linear",
-                repeatType: "loop"
-              }
-            }}
-          >
-            {duplicatedReviews.map((review, index) => (
-              <div
-                key={`${review.name}-${index}`}
-                className="flex-shrink-0 w-[400px] bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border border-gray-200 shadow-lg hover:shadow-2xl transition-shadow duration-300"
-              >
-                {/* Quote icon */}
-                <Quote className="w-10 h-10 text-primary-200 mb-4" />
+          {duplicatedReviews.map((review, index) => (
+            <div
+              key={`${review.name}-${index}`}
+              className="flex-shrink-0 w-[400px] bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border border-gray-200 shadow-lg"
+            >
+              {/* Quote icon */}
+              <Quote className="w-10 h-10 text-primary-200 mb-4" />
 
-                {/* Rating */}
-                <div className="flex gap-1 mb-4">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                  ))}
+              {/* Rating */}
+              <div className="flex gap-1 mb-4">
+                {[...Array(review.rating)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+
+              {/* Review text */}
+              <p className="text-gray-700 mb-6 leading-relaxed">
+                "{review.text}"
+              </p>
+
+              {/* Reviewer info */}
+              <div className="flex items-center gap-4 pt-4 border-t border-gray-200">
+                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-400 to-accent-400 flex items-center justify-center text-2xl">
+                  {review.image}
                 </div>
-
-                {/* Review text */}
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  "{review.text}"
-                </p>
-
-                {/* Reviewer info */}
-                <div className="flex items-center gap-4 pt-4 border-t border-gray-200">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-400 to-accent-400 flex items-center justify-center text-2xl">
-                    {review.image}
-                  </div>
-                  <div>
-                    <p className="font-bold text-gray-900">{review.name}</p>
-                    <p className="text-sm text-gray-600">{review.role}</p>
-                    <p className="text-sm text-primary-600 font-medium">{review.company}</p>
-                  </div>
+                <div>
+                  <p className="font-bold text-gray-900">{review.name}</p>
+                  <p className="text-sm text-gray-600">{review.role}</p>
+                  <p className="text-sm text-primary-600 font-medium">{review.company}</p>
                 </div>
               </div>
-            ))}
-          </motion.div>
-        </div>
+            </div>
+          ))}
+        </motion.div>
 
         {/* Gradient overlays */}
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent pointer-events-none" />
-      </div>
-
-      {/* Note about pausing */}
-      <div className="text-center mt-8">
-        <p className="text-sm text-gray-500 italic">Hover over a review to pause scrolling</p>
       </div>
     </section>
   );

@@ -113,8 +113,7 @@ export default function UseCases() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -8 }}
-              className="group relative bg-white rounded-2xl border border-gray-200 hover:border-transparent hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              className="group relative bg-white rounded-2xl border border-gray-200 transition-all duration-300 overflow-hidden"
             >
               {/* Gradient header */}
               <div className={`h-2 bg-gradient-to-r ${useCase.gradient}`} />

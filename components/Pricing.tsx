@@ -98,7 +98,6 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              whileHover={{ y: -8 }}
               className={`relative bg-white rounded-2xl shadow-xl overflow-hidden ${
                 tier.popular ? 'ring-2 ring-primary-500 scale-105' : ''
               }`}
@@ -172,11 +171,7 @@ export default function Pricing() {
                 {/* CTA */}
                 <button
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                  className={`w-full px-6 py-3 rounded-xl font-semibold transition-all hover:scale-105 flex items-center justify-center gap-2 ${
-                    tier.popular
-                      ? `bg-gradient-to-r ${tier.gradient} text-white hover:shadow-xl`
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-                  }`}
+                  className="w-full px-6 py-3 rounded-xl font-semibold transition-all hover:scale-105 flex items-center justify-center gap-2 bg-purple-600 text-white hover:bg-purple-700 hover:shadow-xl"
                 >
                   Get Started
                   <ArrowRight className="w-4 h-4" />

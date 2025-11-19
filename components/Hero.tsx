@@ -109,8 +109,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed"
         >
-          We build custom AI-coded tools that automate your business processes,
-          from job management to invoice creation, saving you time and maximizing efficiency.
+          Save time and maximize efficiency with custom AI-coded tools that automate your business processes,
+          from job management to invoice creation and beyond.
         </motion.p>
 
         <motion.div
