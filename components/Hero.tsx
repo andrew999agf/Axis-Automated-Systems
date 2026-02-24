@@ -54,7 +54,7 @@ export default function Hero() {
               className="flex items-center gap-2"
             >
               <Bot className="w-8 h-8 text-primary-600" />
-              <span className="font-bold text-xl text-gray-900">Axis Automated Systems</span>
+              <span className="font-bold text-xl text-gray-900">Shoal Valley Systems</span>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -63,6 +63,7 @@ export default function Hero() {
               className="hidden md:flex items-center gap-8"
             >
               <a href="#services" className="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
+              <a href="#products" className="text-gray-700 hover:text-primary-600 transition-colors">Products</a>
               <a href="#how-it-works" className="text-gray-700 hover:text-primary-600 transition-colors">How It Works</a>
               <a href="#pricing" className="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
               <button

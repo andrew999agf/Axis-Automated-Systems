@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
+import Products from '@/components/Products';
 import HowItWorks from '@/components/HowItWorks';
 import UseCases from '@/components/UseCases';
 import Pricing from '@/components/Pricing';
@@ -13,6 +14,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Hero />
       <Services />
+      <Products />
       <HowItWorks />
       <UseCases />
       <Pricing />

@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <Bot className="w-8 h-8 text-primary-400" />
-              <span className="font-bold text-xl text-white">Axis Automated Systems</span>
+              <span className="font-bold text-xl text-white">Shoal Valley Systems</span>
             </div>
             <p className="text-gray-400 mb-4 leading-relaxed">
               AI-powered business automation solutions. We build custom tools that transform
@@ -21,8 +21,8 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-2 text-gray-400">
               <Mail className="w-4 h-4" />
-              <a href="mailto:contact@axisautomated.com" className="hover:text-primary-400 transition-colors">
-                contact@axisautomated.com
+              <a href="mailto:contact@shoalvalleysystems.com" className="hover:text-primary-400 transition-colors">
+                contact@shoalvalleysystems.com
               </a>
             </div>
           </div>
@@ -34,6 +34,11 @@ export default function Footer() {
               <li>
                 <a href="#services" className="hover:text-primary-400 transition-colors">
                   Services
+                </a>
+              </li>
+              <li>
+                <a href="#products" className="hover:text-primary-400 transition-colors">
+                  Products
                 </a>
               </li>
               <li>
@@ -105,7 +110,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-500">
-              © {currentYear} Axis Automated Systems LLC. All rights reserved.
+              © {currentYear} Shoal Valley Systems LLC. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="hover:text-primary-400 transition-colors">
