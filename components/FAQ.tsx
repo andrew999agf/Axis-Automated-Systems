@@ -7,43 +7,35 @@ import { ChevronDown, HelpCircle } from 'lucide-react';
 const faqs = [
   {
     question: 'What types of businesses do you work with?',
-    answer: 'We work with businesses of all sizes across various industries including construction, logistics, e-commerce, healthcare, professional services, and more. Our solutions are custom-built to fit your specific needs, regardless of your industry.'
+    answer: 'We work with businesses of all sizes across industries including construction, logistics, e-commerce, healthcare, professional services, real estate, and more. If your business has a manual or inefficient process, we can likely automate it.'
   },
   {
-    question: 'How long does it take to build a custom automation tool?',
-    answer: 'Timeline varies based on complexity. Basic websites typically take 1-2 weeks, while complex automation tools can take 4-8 weeks. We provide a detailed timeline during the consultation phase and keep you updated throughout the development process.'
+    question: 'How long does it take to build a custom tool?',
+    answer: 'It depends on the complexity. Simpler tools and websites typically take 1–2 weeks, while more complex automation platforms can take 4–8 weeks. We provide a clear timeline during the consultation and keep you updated throughout.'
   },
   {
-    question: 'What is the difference between hosted and standalone solutions?',
-    answer: 'Hosted solutions run on our cloud servers with monthly hosting fees and ongoing maintenance. Standalone solutions are delivered as complete applications that you own and run on your own infrastructure, with no recurring hosting costs.'
-  },
-  {
-    question: 'Do you provide training and support?',
-    answer: 'Absolutely! All projects include comprehensive training and documentation. Hosted solutions include ongoing support and updates. Standalone solutions come with initial training and optional support packages.'
-  },
-  {
-    question: 'Can you integrate with our existing software?',
-    answer: 'Yes! We specialize in API integrations and can connect your new automation tools with existing software, databases, and third-party services. We\'ll assess your current tech stack during the consultation.'
-  },
-  {
-    question: 'What if we need changes or updates later?',
-    answer: 'For hosted solutions, updates and changes are included in your monthly retainer. For standalone solutions, we offer flexible maintenance packages. You can also request new features at any time.'
+    question: 'What is the difference between a hosted solution and a standalone application?',
+    answer: 'Hosted solutions run on cloud servers with ongoing maintenance included. Standalone applications are delivered as complete software you own outright and run on your own infrastructure — no recurring hosting costs.'
   },
   {
     question: 'How is AI used in your development process?',
-    answer: 'We leverage cutting-edge AI coding tools to accelerate development while maintaining high quality. This allows us to build sophisticated automation tools faster and more cost-effectively than traditional development methods.'
+    answer: 'We use cutting-edge AI coding tools to accelerate development while maintaining high code quality. This lets us build sophisticated software faster and more cost-effectively than traditional development methods — and it\'s core to how we stay on the leading edge.'
+  },
+  {
+    question: 'Can you integrate with software we already use?',
+    answer: 'Yes. We specialize in API integrations and can connect new tools with your existing software, databases, and third-party services. We assess your current tech stack during the consultation phase.'
+  },
+  {
+    question: 'Do you provide training and documentation?',
+    answer: 'Absolutely. All projects include training and documentation tailored to your team. Hosted solutions include ongoing support. Standalone deliverables come with full documentation and optional support packages.'
   },
   {
     question: 'Is my data secure?',
-    answer: 'Security is our top priority. All hosted solutions use encrypted connections (SSL/HTTPS), secure databases, and follow industry best practices. We can also sign NDAs and provide detailed security documentation upon request.'
+    answer: 'Security is a priority. All hosted solutions use encrypted connections (SSL/HTTPS), secure databases, and industry best practices. We can provide detailed security documentation and sign NDAs upon request.'
   },
   {
-    question: 'What happens if I want to cancel my hosted solution?',
-    answer: 'We offer flexible month-to-month agreements for hosted solutions. You can cancel anytime with 30 days notice. We\'ll provide you with all your data in a usable format.'
-  },
-  {
-    question: 'Do you offer custom quotes?',
-    answer: 'Yes! While we have standard pricing tiers, every business is unique. Contact us for a free consultation and custom quote tailored to your specific requirements and budget.'
+    question: 'What happens if we need changes after delivery?',
+    answer: 'For hosted solutions, updates are part of ongoing maintenance. For standalone applications, we offer flexible maintenance packages and can scope new features at any time.'
   }
 ];
 
@@ -51,7 +43,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50/30">
+    <section id="faq" className="py-24 bg-gradient-to-br from-gray-50 to-blue-50/30">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -68,7 +60,7 @@ export default function FAQ() {
             Frequently Asked <span className="gradient-text">Questions</span>
           </h2>
           <p className="text-xl text-gray-600">
-            Everything you need to know about our services
+            Everything you need to know about working with us
           </p>
         </motion.div>
 
@@ -118,7 +110,7 @@ export default function FAQ() {
           ))}
         </div>
 
-        {/* Still have questions CTA */}
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -130,7 +122,7 @@ export default function FAQ() {
             Still have questions?
           </h3>
           <p className="text-gray-600 mb-6">
-            We're here to help! Get in touch and we'll answer all your questions.
+            Reach out and we'll get back to you promptly.
           </p>
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}

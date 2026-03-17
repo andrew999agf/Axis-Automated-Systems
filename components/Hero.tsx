@@ -8,38 +8,19 @@ export default function Hero() {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const scrollToPricing = () => {
-    document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-blue-50/30 to-teal-50/30">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           className="absolute top-20 left-10 w-72 h-72 bg-primary-200/30 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
+          animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
         />
         <motion.div
           className="absolute bottom-20 right-10 w-96 h-96 bg-accent-200/30 rounded-full blur-3xl"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1
-          }}
+          animate={{ scale: [1.2, 1, 1.2], opacity: [0.3, 0.5, 0.3] }}
+          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
         />
       </div>
 
@@ -51,9 +32,12 @@ export default function Hero() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="flex items-center gap-2"
+              className="flex items-center gap-3"
             >
-              <Bot className="w-8 h-8 text-primary-600" />
+              {/* Logo placeholder */}
+              <div className="w-9 h-9 rounded-lg border-2 border-dashed border-primary-400 bg-primary-50 flex items-center justify-center">
+                <span className="text-xs font-bold text-primary-500 tracking-tight">SVS</span>
+              </div>
               <span className="font-bold text-xl text-gray-900">Shoal Valley Systems</span>
             </motion.div>
             <motion.div
@@ -63,14 +47,13 @@ export default function Hero() {
               className="hidden md:flex items-center gap-8"
             >
               <a href="#services" className="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
-              <a href="#products" className="text-gray-700 hover:text-primary-600 transition-colors">Products</a>
               <a href="#how-it-works" className="text-gray-700 hover:text-primary-600 transition-colors">How It Works</a>
-              <a href="#pricing" className="text-gray-700 hover:text-primary-600 transition-colors">Pricing</a>
+              <a href="#faq" className="text-gray-700 hover:text-primary-600 transition-colors">FAQ</a>
               <button
                 onClick={scrollToContact}
                 className="px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
               >
-                Get Started
+                Get in Touch
               </button>
             </motion.div>
           </div>
@@ -87,7 +70,7 @@ export default function Hero() {
         >
           <Sparkles className="w-5 h-5 text-accent-500" />
           <span className="text-accent-600 font-semibold tracking-wide uppercase text-sm">
-            AI-Powered Business Automation
+            Texas-Based Software Development LLC
           </span>
           <Sparkles className="w-5 h-5 text-accent-500" />
         </motion.div>
@@ -98,9 +81,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight"
         >
-          Transform Your Business with{' '}
+          Serious Tools for{' '}
           <span className="gradient-text">
-            Intelligent Automation
+            Serious Problems
           </span>
         </motion.h1>
 
@@ -110,8 +93,8 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed"
         >
-          Save time and maximize efficiency with custom AI-coded tools that automate your business processes,
-          from job management to invoice creation and beyond.
+          We build custom AI-powered software for businesses that need real solutions —
+          grounded in legal and financial domain expertise, not generic dev-shop output.
         </motion.p>
 
         <motion.div
@@ -124,15 +107,15 @@ export default function Hero() {
             onClick={scrollToContact}
             className="group px-8 py-4 bg-primary-600 text-white rounded-xl font-semibold text-lg hover:bg-primary-700 transition-all hover:scale-105 hover:shadow-xl flex items-center gap-2"
           >
-            Start Automating Today
+            Work With Us
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
-          <button
-            onClick={scrollToPricing}
+          <a
+            href="#services"
             className="px-8 py-4 bg-white text-primary-600 rounded-xl font-semibold text-lg border-2 border-primary-600 hover:bg-primary-50 transition-all hover:scale-105 hover:shadow-xl"
           >
-            View Pricing
-          </button>
+            See What We Build
+          </a>
         </motion.div>
 
         {/* Trust indicators */}
@@ -144,18 +127,18 @@ export default function Hero() {
         >
           <div className="flex flex-col items-center gap-2 p-6 rounded-xl glass">
             <Zap className="w-8 h-8 text-accent-500" />
-            <h3 className="font-bold text-2xl text-gray-900">100%</h3>
-            <p className="text-gray-600">Custom Solutions</p>
+            <h3 className="font-bold text-2xl text-gray-900">AI-First</h3>
+            <p className="text-gray-600">Built on the leading edge</p>
           </div>
           <div className="flex flex-col items-center gap-2 p-6 rounded-xl glass">
             <Bot className="w-8 h-8 text-primary-500" />
-            <h3 className="font-bold text-2xl text-gray-900">AI-Powered</h3>
-            <p className="text-gray-600">Intelligent Automation</p>
+            <h3 className="font-bold text-2xl text-gray-900">Domain Expertise</h3>
+            <p className="text-gray-600">Legal & financial roots</p>
           </div>
           <div className="flex flex-col items-center gap-2 p-6 rounded-xl glass">
             <Sparkles className="w-8 h-8 text-accent-500" />
-            <h3 className="font-bold text-2xl text-gray-900">Ongoing</h3>
-            <p className="text-gray-600">Support & Updates</p>
+            <h3 className="font-bold text-2xl text-gray-900">100% Custom</h3>
+            <p className="text-gray-600">No templates, no shortcuts</p>
           </div>
         </motion.div>
       </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { Bot, Mail, Linkedin, Twitter, Facebook, Github } from 'lucide-react';
+import { Mail, Linkedin, Twitter, Facebook, Github } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,13 +11,16 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <Bot className="w-8 h-8 text-primary-400" />
+            <div className="flex items-center gap-3 mb-4">
+              {/* Logo placeholder */}
+              <div className="w-9 h-9 rounded-lg border-2 border-dashed border-primary-500 bg-primary-900/40 flex items-center justify-center">
+                <span className="text-xs font-bold text-primary-400 tracking-tight">SVS</span>
+              </div>
               <span className="font-bold text-xl text-white">Shoal Valley Systems</span>
             </div>
             <p className="text-gray-400 mb-4 leading-relaxed">
-              AI-powered business automation solutions. We build custom tools that transform
-              your operations and maximize efficiency.
+              Texas-based software development LLC building custom AI-powered tools
+              for businesses that need real solutions — grounded in legal and financial domain expertise.
             </p>
             <div className="flex items-center gap-2 text-gray-400">
               <Mail className="w-4 h-4" />
@@ -37,18 +40,13 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#products" className="hover:text-primary-400 transition-colors">
-                  Products
-                </a>
-              </li>
-              <li>
                 <a href="#how-it-works" className="hover:text-primary-400 transition-colors">
                   How It Works
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="hover:text-primary-400 transition-colors">
-                  Pricing
+                <a href="#faq" className="hover:text-primary-400 transition-colors">
+                  FAQ
                 </a>
               </li>
               <li>
@@ -101,7 +99,7 @@ export default function Footer() {
               </a>
             </div>
             <p className="text-sm text-gray-500 mt-4">
-              Connect with us on social media for updates and insights.
+              Connect with us for updates and insights.
             </p>
           </div>
         </div>

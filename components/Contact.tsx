@@ -65,10 +65,10 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Let's <span className="gradient-text">Get Started</span>
+            Let's <span className="gradient-text">Talk</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Ready to transform your business with automation? Get in touch and let's discuss your needs.
+            Tell us about your business and what you're trying to solve. We'll follow up within 24 hours.
           </p>
         </motion.div>
 
@@ -98,7 +98,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                    <p className="text-gray-600">contact@axisautomated.com</p>
+                    <p className="text-gray-600">contact@shoalvalleysystems.com</p>
                   </div>
                 </div>
 
@@ -118,7 +118,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Location</h4>
-                    <p className="text-gray-600">Serving businesses nationwide</p>
+                    <p className="text-gray-600">Texas-based, serving clients nationwide</p>
                   </div>
                 </div>
               </div>
@@ -133,11 +133,11 @@ export default function Contact() {
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    Transparent pricing
+                    100% custom — no templates
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    Custom solutions tailored to you
+                    Legal & financial domain expertise
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
@@ -227,18 +227,19 @@ export default function Contact() {
               {/* Service Interest */}
               <div>
                 <label htmlFor="serviceInterest" className="block text-sm font-semibold text-gray-900 mb-2">
-                  Service Interest <span className="text-red-500">*</span>
+                  What are you looking for? <span className="text-red-500">*</span>
                 </label>
                 <select
-                  {...register('serviceInterest', { required: 'Please select a service' })}
+                  {...register('serviceInterest', { required: 'Please select an option' })}
                   id="serviceInterest"
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
                 >
-                  <option value="">Select a service...</option>
-                  <option value="basic-website">Basic Website</option>
-                  <option value="complex-hosted">Complex Hosted Tool</option>
-                  <option value="complex-standalone">Complex Standalone Tool</option>
-                  <option value="custom-quote">Custom Quote</option>
+                  <option value="">Select an option...</option>
+                  <option value="custom-software">Custom Software / Automation Tool</option>
+                  <option value="website">Business Website</option>
+                  <option value="ai-integration">AI Integration</option>
+                  <option value="consultation">General Consultation</option>
+                  <option value="other">Other</option>
                 </select>
                 {errors.serviceInterest && (
                   <p className="mt-1 text-sm text-red-500">{errors.serviceInterest.message}</p>
