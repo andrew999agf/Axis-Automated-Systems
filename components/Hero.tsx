@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, Zap, Bot } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 
 export default function Hero() {
   const scrollToContact = () => {
@@ -46,14 +46,13 @@ export default function Hero() {
               transition={{ duration: 0.5 }}
               className="hidden md:flex items-center gap-8"
             >
-              <a href="#services" className="text-gray-700 hover:text-primary-600 transition-colors">Services</a>
-              <a href="#how-it-works" className="text-gray-700 hover:text-primary-600 transition-colors">How It Works</a>
+              <a href="#about" className="text-gray-700 hover:text-primary-600 transition-colors">About</a>
               <a href="#faq" className="text-gray-700 hover:text-primary-600 transition-colors">FAQ</a>
               <button
                 onClick={scrollToContact}
                 className="px-6 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
               >
-                Get in Touch
+                Connect
               </button>
             </motion.div>
           </div>
@@ -61,29 +60,29 @@ export default function Hero() {
       </nav>
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="flex items-center justify-center gap-2 mb-6"
         >
-          <Sparkles className="w-5 h-5 text-accent-500" />
-          <span className="text-accent-600 font-semibold tracking-wide uppercase text-sm">
-            Texas-Based Software Development LLC
+          <Sparkles className="w-4 h-4 text-accent-500" />
+          <span className="text-accent-600 font-semibold tracking-widest uppercase text-xs">
+            Shoal Valley Systems · Texas
           </span>
-          <Sparkles className="w-5 h-5 text-accent-500" />
+          <Sparkles className="w-4 h-4 text-accent-500" />
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight"
+          className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight"
         >
-          Serious Tools for{' '}
+          We build what{' '}
           <span className="gradient-text">
-            Serious Problems
+            AI makes possible.
           </span>
         </motion.h1>
 
@@ -91,55 +90,23 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed"
+          className="text-xl md:text-2xl text-gray-500 mb-14 max-w-2xl mx-auto leading-relaxed font-light"
         >
-          We build custom AI-powered software for businesses that need real solutions —
-          grounded in legal and financial domain expertise, not generic dev-shop output.
+          No fixed catalog. No template solutions. Just the frontier.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <button
             onClick={scrollToContact}
-            className="group px-8 py-4 bg-primary-600 text-white rounded-xl font-semibold text-lg hover:bg-primary-700 transition-all hover:scale-105 hover:shadow-xl flex items-center gap-2"
+            className="group inline-flex items-center gap-2 px-8 py-4 bg-primary-600 text-white rounded-xl font-semibold text-lg hover:bg-primary-700 transition-all hover:scale-105 hover:shadow-xl"
           >
-            Work With Us
+            Get in Touch
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
-          <a
-            href="#services"
-            className="px-8 py-4 bg-white text-primary-600 rounded-xl font-semibold text-lg border-2 border-primary-600 hover:bg-primary-50 transition-all hover:scale-105 hover:shadow-xl"
-          >
-            See What We Build
-          </a>
-        </motion.div>
-
-        {/* Trust indicators */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
-        >
-          <div className="flex flex-col items-center gap-2 p-6 rounded-xl glass">
-            <Zap className="w-8 h-8 text-accent-500" />
-            <h3 className="font-bold text-2xl text-gray-900">AI-First</h3>
-            <p className="text-gray-600">Built on the leading edge</p>
-          </div>
-          <div className="flex flex-col items-center gap-2 p-6 rounded-xl glass">
-            <Bot className="w-8 h-8 text-primary-500" />
-            <h3 className="font-bold text-2xl text-gray-900">Domain Expertise</h3>
-            <p className="text-gray-600">Legal & financial roots</p>
-          </div>
-          <div className="flex flex-col items-center gap-2 p-6 rounded-xl glass">
-            <Sparkles className="w-8 h-8 text-accent-500" />
-            <h3 className="font-bold text-2xl text-gray-900">100% Custom</h3>
-            <p className="text-gray-600">No templates, no shortcuts</p>
-          </div>
         </motion.div>
       </div>
 
@@ -147,18 +114,18 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
+        transition={{ duration: 1, delay: 1.2 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-gray-400 rounded-full flex items-start justify-center p-2"
+          className="w-6 h-10 border-2 border-gray-300 rounded-full flex items-start justify-center p-2"
         >
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-1.5 h-1.5 bg-gray-400 rounded-full"
+            className="w-1.5 h-1.5 bg-gray-300 rounded-full"
           />
         </motion.div>
       </motion.div>
