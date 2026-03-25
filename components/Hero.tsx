@@ -1,8 +1,19 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const fade = { initial: { opacity: 0 }, animate: { opacity: 1 } };
+
+// ─── BANNER IMAGE ────────────────────────────────────────────────────────────
+// To add your banner:
+//   1. Drop your image file into the /public folder (e.g. /public/banner.jpg)
+//   2. Change BANNER_SRC below to the filename:  '/banner.jpg'
+//   3. Set BANNER_ALT to a short description of the image
+// Set BANNER_SRC to null to hide the banner entirely.
+const BANNER_SRC: string | null = null;   // e.g. '/banner.jpg'
+const BANNER_ALT = 'Banner';
+// ─────────────────────────────────────────────────────────────────────────────
 
 export default function Hero() {
   const scrollToContact = () => {
@@ -11,6 +22,26 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col bg-white">
+
+      {/* Banner image */}
+      <div className="w-full h-48 md:h-64 bg-gray-100 border-b border-gray-200 relative overflow-hidden flex items-center justify-center">
+        {BANNER_SRC ? (
+          <Image
+            src={BANNER_SRC}
+            alt={BANNER_ALT}
+            fill
+            className="object-cover"
+            priority
+          />
+        ) : (
+          <div className="flex flex-col items-center gap-2 text-gray-400 select-none pointer-events-none">
+            <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5M21 3.75H3A.75.75 0 002.25 4.5v15" />
+            </svg>
+            <span className="text-sm font-medium">Banner image — see Hero.tsx to add</span>
+          </div>
+        )}
+      </div>
 
       {/* Navigation */}
       <nav className="border-b border-gray-200">
