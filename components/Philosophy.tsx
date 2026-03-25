@@ -22,7 +22,7 @@ const principles = [
 
 export default function Philosophy() {
   return (
-    <section id="about" className="bg-gray-950 text-white py-24 md:py-32">
+    <section id="about" className="bg-gray-50 py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
         {/* Header */}
@@ -33,8 +33,8 @@ export default function Philosophy() {
           transition={{ duration: 0.6 }}
           className="mb-16 md:mb-20"
         >
-          <p className="text-xs tracking-[0.2em] uppercase text-primary-500 mb-5">What we are</p>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight max-w-2xl">
+          <p className="text-xs tracking-[0.2em] uppercase text-primary-600 mb-5">What we are</p>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight leading-tight max-w-2xl text-gray-900">
             Built for problems that<br />don't fit a template.
           </h2>
         </motion.div>
@@ -48,16 +48,16 @@ export default function Philosophy() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="border-t border-gray-800 py-10 md:py-12 grid md:grid-cols-[8rem_1fr] gap-6"
+              className="border-t border-gray-200 py-10 md:py-12 grid md:grid-cols-[8rem_1fr] gap-6"
             >
-              <span className="text-5xl font-black text-gray-800 leading-none">{p.number}</span>
+              <span className="text-5xl font-black text-gray-200 leading-none">{p.number}</span>
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">{p.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed max-w-xl">{p.body}</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{p.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed max-w-xl">{p.body}</p>
               </div>
             </motion.div>
           ))}
-          <div className="border-t border-gray-800" />
+          <div className="border-t border-gray-200" />
         </div>
 
         {/* Footer statement */}
@@ -68,12 +68,12 @@ export default function Philosophy() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-16 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6"
         >
-          <p className="text-gray-500 text-sm leading-relaxed max-w-lg">
+          <p className="text-gray-400 text-sm leading-relaxed max-w-lg">
             Shoal Valley Systems is a Texas-based software development LLC.
             We build AI-powered solutions — and we stay relentlessly ahead of what&rsquo;s possible.
           </p>
-          <div className="w-12 h-12 rounded border-2 border-dashed border-gray-700 flex items-center justify-center flex-shrink-0">
-            <span className="text-xs font-black text-gray-600 tracking-tight">SVS</span>
+          <div className="w-12 h-12 rounded border-2 border-dashed border-gray-300 flex items-center justify-center flex-shrink-0">
+            <span className="text-xs font-black text-gray-400 tracking-tight">SVS</span>
           </div>
         </motion.div>
 
