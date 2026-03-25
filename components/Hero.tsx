@@ -1,19 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const fade = { initial: { opacity: 0 }, animate: { opacity: 1 } };
-
-// ─── BANNER IMAGE ────────────────────────────────────────────────────────────
-// To add your banner:
-//   1. Drop your image file into the /public folder (e.g. /public/banner.jpg)
-//   2. Change BANNER_SRC below to the filename:  '/banner.jpg'
-//   3. Set BANNER_ALT to a short description of the image
-// Set BANNER_SRC to null to hide the banner entirely.
-const BANNER_SRC: string | null = null;   // e.g. '/banner.jpg'
-const BANNER_ALT = 'Banner';
-// ─────────────────────────────────────────────────────────────────────────────
 
 export default function Hero() {
   const scrollToContact = () => {
@@ -23,19 +12,15 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col bg-white">
 
-      {/* Banner image */}
-      <div className="w-full h-48 md:h-64 bg-gray-100 border-b border-gray-200 relative overflow-hidden flex items-center justify-center">
-        {BANNER_SRC ? (
-          <Image
-            src={BANNER_SRC}
-            alt={BANNER_ALT}
-            fill
-            className="object-cover"
-            priority
-          />
-        ) : (
-          <div className="absolute inset-4 rounded border-2 border-dashed border-gray-300" />
-        )}
+      {/* Banner image — place your file at public/banner.png to show it */}
+      <div className="w-full h-48 md:h-64 bg-gray-100 border-b border-gray-200 overflow-hidden">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/banner.png"
+          alt="Banner"
+          className="w-full h-full object-cover"
+          onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+        />
       </div>
 
       {/* Navigation */}
