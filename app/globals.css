@@ -43,19 +43,14 @@
   background: #555;
 }
 
-/* Gradient text utility */
-.gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-accent-500;
-}
-
-/* Glass morphism effect */
-.glass {
-  @apply bg-white/80 backdrop-blur-lg border border-gray-200/50;
+/* Accent text — used sparingly, one moment per page */
+.accent-text {
+  @apply text-primary-600;
 }
 
 /* Smooth transitions */
 * {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
