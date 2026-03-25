@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     question: 'How do I get in touch?',
-    answer: 'Email us at contact@shoalvalleysystems.com. If you think there's a fit, just say so — we'll take it from there.',
+    answer: "Email us at contact@shoalvalleysystems.com. If you think there's a fit, just say so — we'll take it from there.",
   },
 ];
 
