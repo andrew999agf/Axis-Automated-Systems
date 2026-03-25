@@ -34,12 +34,7 @@ export default function Hero() {
             priority
           />
         ) : (
-          <div className="flex flex-col items-center gap-2 text-gray-400 select-none pointer-events-none">
-            <svg className="w-10 h-10" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5M21 3.75H3A.75.75 0 002.25 4.5v15" />
-            </svg>
-            <span className="text-sm font-medium">Banner image — see Hero.tsx to add</span>
-          </div>
+          <div className="absolute inset-4 rounded border-2 border-dashed border-gray-300" />
         )}
       </div>
 
